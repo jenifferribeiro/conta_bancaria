@@ -1,6 +1,8 @@
 package conta_bancaria;
 
 import java.util.Scanner;
+
+import conta_bancaria.model.Conta;
 import conta_bancaria.util.Cores;
 
 public class Menu {
@@ -10,6 +12,19 @@ public class Menu {
 	public static void main(String[] args) {
 		
 		int opcao;
+		
+		/*Criar Objetos da classe conta para testes*/
+		
+		Conta c1 = new Conta(1, 123, 1, "Jeniffer Ribeiro", 100000.00f);
+		c1.visualizar();
+		System.out.println("Exibir o saldo: " + c1.getSaldo());
+		c1.setSaldo(200000.00f);
+		c1.visualizar();
+		c1.sacar(210000.00f);
+		c1.visualizar();
+		c1.depositar(5000.00f);
+		c1.visualizar();
+		
 		
 		while (true) {
 			
